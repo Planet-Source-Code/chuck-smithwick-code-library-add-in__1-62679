@@ -1,0 +1,11 @@
+CodeLibrary AddIn:
+This Add In adds a dropdown combo box to the standard toolbar with access to a database of code snippets to insert into your current project.
+You can add new snippets on the fly as you write them.  The backend database is in Access, with a two field table - one field called "ProcName" that contains the text that will be seen in the dropdown combo box and one field called "Code" that is a memo type field containing the actual procedure code.  
+Source code includes CONST reference to the database file (C:\Program Files\Microsoft Visual Studio\Common\Tools\CodeLibrary\ CodeLibrary.mdb on my system).  Change this to the actual location of your database file and recompile the Add In DLL to use.  I've found it very convenient as I constantly collect reusable snippets and I hate cutting and pasting with multiple files open.  You can manually edit the database file as well and populate it with your own snippets and delete the ones you don't want.
+
+* Updates
+- Changed procedures to NOT utilize the clipboard
+- Added ability to delete records from the database
+- Combined the view and paste functions into one operation - view the code snippet with the option to paste into the current code pane.
+- Added optional code to add controls on a separate toolbar if desired.
+Thanks to Roger Gilchrist for the good suggestions.
